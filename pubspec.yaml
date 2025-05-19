@@ -1,6 +1,6 @@
 name: ne_secure
-description: NE Secure - Secure reporting and SOS app for NE community
-publish_to: 'none'
+description: NE Secure - Secure reporting and SOS app for your community
+publish_to: 'none' # Remove this line if you want to publish to pub.dev
 
 version: 1.0.0+1
 
@@ -10,10 +10,15 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  # Firebase core for initialization
   firebase_core: ^2.27.0
+  # Firebase authentication for OTP login
   firebase_auth: ^4.17.4
+  # Cloud Firestore for storing complaints, SOS, and user profiles
   cloud_firestore: ^4.15.9
-  location: ^6.0.2
+  # Geolocator for location services in SOS and complaints
+  geolocator: ^11.0.0
+  # Cupertino icons for iOS-style icons (optional, but recommended)
   cupertino_icons: ^1.0.6
 
 dev_dependencies:
@@ -23,3 +28,4 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
